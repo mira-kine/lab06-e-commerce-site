@@ -1,6 +1,8 @@
 import { renderMochi } from '../render-mochi.js';
 import { mochis } from '../data/mochis.js';
 import { findById } from '../utils.js';
+import { renderItem } from '../render-item.js';
+import { cart } from '../data/cart-data.js';
 
 const test = QUnit.test;
 
@@ -22,25 +24,10 @@ test('findById function returns matching ID', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-// test('DOM render items in shopping cart, HTML snippet', (expect) => {
-//     const expected = `<table> 
-//         <thead>
-//             <tr><th>Item</th>
-//             <th>Price</th>
-//             <th>Quantity</th>
-//             <th>Total</th>
-//         </tr></thead>
-//         <tbody id="shopping-table">
-//         <tr><td>calm mochi</td><td>1.5</td><td>3</td><td>4.5</td></tr><tr><td>creative mochi</td><td>1.5</td><td>2</td><td>3</td></tr></tbody>
-//         <tfoot>
-//             <tr>
-//                 <td></td>
-//                 <td></td>
-//                 <td>Order Total: </td>
-//                 <td>TBD</td>
-//             </tr>
-//         </tfoot>
-//     </table>`;
-//     const actual = 
-//     expect.equal(actual, expected);
-// });
+test('DOM render items in shopping cart, HTML snippet', (expect) => {
+    const expected = `<tr><td>calm mochi</td><td>1.5</td><td>3</td><td>4.5</td></tr>`;
+    const cartItem = cart[0];
+    const mochiData = mochis[0];
+    const actual = renderItem(cartItem, mochiData).outerHTML;
+    expect.equal(actual, expected);
+});
