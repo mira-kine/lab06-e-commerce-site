@@ -10,7 +10,7 @@ import { findById } from '../utils.js';
     // <td>Calm Mochi</td>
     //     <td>$1.5</td>
     //     <td>3</td>
-    //     <td>$4.5</td>
+    //     <td>$4.5</td> 
     //     <td>Order Total:</td>
     //     <td>$4.5</td>
 const shoppingTable = document.getElementById('shopping-table');
@@ -31,3 +31,4 @@ for (let cartItem of cart) {
     trItem.append(tdName, tdPrice, tdQty, tdTotal);
     shoppingTable.appendChild(trItem);
 }
+
