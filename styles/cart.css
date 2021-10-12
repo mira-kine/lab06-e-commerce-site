@@ -6,14 +6,11 @@ body {
 #heading-container {
     align-items: center;
     text-align: center;
-    flex-direction: row;
     height: 180px;
     width: 300px;
 }
 
 table {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     height: auto;
     width: 500px;
@@ -30,10 +27,12 @@ th {
 }
 
 table td {
-    align-items: center;
+    align-items: right;
 }
-
+/* 
 #shopping-table {
     align-items: center;
     justify-content: space-between;
-}
+    display: flex;
+    flex-direction: column;
+} */
