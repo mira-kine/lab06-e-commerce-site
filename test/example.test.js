@@ -1,18 +1,11 @@
-// IMPORT MODULES under test here:
-// import { example } from '../example.js';
+import { renderMochi } from '../render-mochi.js'
+import { mochis } from '../mochis.js'
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
-
-    //Expect
-    // Make assertions about what is expected versus the actual result
+test('renderMochi should return an HTML snippet', (expect) => {
+    const expected = `<div class="mochi-item"><h2>calm mochi</h2><img src="./assets/calm-mochi.jpg"><button>add</button><p>Flavor: ube</p><p>Mood: calm</p><p>Price: 1.5</p><hr></div>`;
+    const calmMochi = mochis[0];
+    const actual = renderMochi(calmMochi).outerHTML;
     expect.equal(actual, expected);
 });

@@ -1,8 +1,9 @@
-// import functions and grab DOM elements
+import { renderMochi } from './render-mochi.js';
+import { mochis } from './mochis.js';
 
-// initialize global state
+const productList = document.getElementById('product-list');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+for (let mochi of mochis){
+  const mochiItem = renderMochi(mochi);
+  productList.append(mochiItem);
+}
