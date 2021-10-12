@@ -12,12 +12,12 @@ test('renderMochi should return an HTML snippet', (expect) => {
 });
 
 test('findById function returns matching ID', (expect) => {
-    const expected = `id: '1',
-    name: 'calm mochi',
-    flavor: 'ube',
-    mood: 'calm',
-    img: './assets/calm-mochi.jpg',
-    price: 1.5`;
+    const expected = { id: '1',
+        name: 'calm mochi',
+        flavor: 'ube',
+        mood: 'calm',
+        img: './assets/calm-mochi.jpg',
+        price: 1.5 };
     const actual = findById('1', mochis);
     expect.deepEqual(actual, expected);
 });
