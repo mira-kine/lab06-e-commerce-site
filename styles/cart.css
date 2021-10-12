@@ -1,6 +1,39 @@
-#shopping-table {
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+#heading-container {
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    height: 180px;
+    width: 300px;
+}
+
+table {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    height: auto;
+    width: 500px;
+    border-collapse: collapse;
+    border-radius: 20px;
+    border-style: hidden;
+    box-shadow: 0 0 0 5px var(--color-1);
 }
+
+th {
+    border: 1px solid var(--color-3);
+    padding: 15px;
+    margin: 10px;
+}
+
+table td {
+    align-items: center;
+}
+
+/* #table-container {
+    display: flex;
+    flex-direction: column;
+} */
