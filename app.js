@@ -1,5 +1,5 @@
 import { renderMochi } from './render-mochi.js';
-import { mochis } from './mochis.js';
+import { mochis } from './data/mochis.js';
 
 const productList = document.getElementById('product-list');
 
