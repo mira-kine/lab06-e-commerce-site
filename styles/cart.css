@@ -7,7 +7,7 @@ body {
     align-items: center;
     text-align: center;
     flex-direction: row;
-    height: 300px;
+    height: 180px;
     width: 300px;
 }
 
@@ -23,6 +23,17 @@ table {
     box-shadow: 0 0 0 5px var(--color-1);
 }
 
-#table-container {
-    
+th {
+    border: 1px solid var(--color-3);
+    padding: 15px;
+    margin: 10px;
 }
+
+table td {
+    align-items: center;
+}
+
+/* #table-container {
+    display: flex;
+    flex-direction: column;
+} */
