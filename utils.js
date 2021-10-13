@@ -10,7 +10,7 @@ export function calcOrderTotal(cart, mochis){
     let totalPrice = 0;
     for (let item of cart) {
         const mochi = findById(item.id, mochis);
-        totalPrice = totalPrice + mochi.price + item.qty;
+        totalPrice = totalPrice + mochi.price * item.qty;
     }
     
     return totalPrice;
