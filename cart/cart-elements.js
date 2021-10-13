@@ -29,3 +29,4 @@ orderBtn.addEventListener('click', ()=>{
     localStorage.removeItem('CART');
     window.location.replace('..');
 });
+
