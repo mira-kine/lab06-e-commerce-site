@@ -17,6 +17,9 @@ export function renderMochi(mochi){
     const mochiPrice = document.createElement('p');
     mochiPrice.textContent = `Price: $${mochi.price}`;
 
+    // const dropDown = document.createElement('select');
+    // dropDown.options = Number(1, 10);
+
     const addProduct = document.createElement('button');
     addProduct.textContent = 'Add to cart';
     addProduct.id = mochi.id;
