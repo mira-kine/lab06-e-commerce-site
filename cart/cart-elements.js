@@ -1,8 +1,6 @@
 import { mochis } from '../data/mochis.js';
-import { cart } from '../data/cart-data.js';
-import { findById } from '../utils.js';
+import { findById, calcOrderTotal, getCart } from '../utils.js';
 import { renderItem } from '../render-item.js';
-import { calcOrderTotal } from '../utils.js';
 
 // import cart data
 // loop through each item
@@ -17,6 +15,7 @@ import { calcOrderTotal } from '../utils.js';
     //     <td>$4.5</td>
 const shoppingTable = document.getElementById('shopping-table');
 const orderTotal = document.getElementById('order-total');
+const cart = getCart();
 
 for (let cartItem of cart) {
     const mochiData = findById(cartItem.id, mochis);
@@ -25,3 +24,8 @@ for (let cartItem of cart) {
     shoppingTable.appendChild(trItem);
 }
 
+const orderBtn = document.getElementById('order-button');
+orderBtn.addEventListener('click', ()=>{
+    localStorage.removeItem('CART');
+    window.location.replace('..');
+});
