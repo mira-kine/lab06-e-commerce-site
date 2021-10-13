@@ -18,7 +18,9 @@ export function renderMochi(mochi){
     mochiPrice.textContent = `Price: $${mochi.price}`;
 
     const addProduct = document.createElement('button');
-    addProduct.textContent = 'add';
+    addProduct.textContent = 'Add to cart';
+    addProduct.id = mochi.id;
+    addProduct.classList.add('add-product');
 
     mochiItem.append(mochiHeader, img, addProduct, mochiFlavor, mochiMood, mochiPrice);
     
