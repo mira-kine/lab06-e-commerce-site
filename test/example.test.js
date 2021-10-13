@@ -7,7 +7,7 @@ import { cart } from '../data/cart-data.js';
 const test = QUnit.test;
 
 test('renderMochi should return an HTML snippet', (expect) => {
-    const expected = `<div class="mochi-item"><h2>calm mochi</h2><img src="./assets/calm-mochi.jpg"><button>add</button><p>Flavor: ube</p><p>Mood: calm</p><p>Price: $1.5</p></div>`;
+    const expected = `<div class="mochi-item"><h2>calm mochi</h2><img src="./assets/calm-mochi.jpg"><button>add</button><p>Flavor: ube</p><p>Mood: calm</p><p>Price: $2</p></div>`;
     const calmMochi = mochis[0];
     const actual = renderMochi(calmMochi).outerHTML;
     expect.equal(actual, expected);
@@ -19,13 +19,13 @@ test('findById function returns matching ID', (expect) => {
         flavor: 'ube',
         mood: 'calm',
         img: './assets/calm-mochi.jpg',
-        price: 1.5 };
+        price: 2 };
     const actual = findById('1', mochis);
     expect.deepEqual(actual, expected);
 });
 
 test('DOM render items in shopping cart, HTML snippet', (expect) => {
-    const expected = `<tr><td>calm mochi</td><td>1.5</td><td>3</td><td>4.5</td></tr>`;
+    const expected = `<tr><td>calm mochi</td><td>2</td><td>3</td><td>6</td></tr>`;
     const cartItem = cart[0];
     const mochiData = mochis[0];
     const actual = renderItem(cartItem, mochiData).outerHTML;
