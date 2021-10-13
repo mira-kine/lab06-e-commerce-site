@@ -1,5 +1,5 @@
 import { mochis } from '../data/mochis.js';
-import { findById, calcOrderTotal, getCart } from '../utils.js';
+import { findById, calcOrderTotal, getCart, clearCart } from '../utils.js';
 import { renderItem } from '../render-item.js';
 
 // import cart data
@@ -26,7 +26,12 @@ for (let cartItem of cart) {
 
 const orderBtn = document.getElementById('order-button');
 orderBtn.addEventListener('click', ()=>{
-    localStorage.removeItem('CART');
-    window.location.replace('..');
+    if (cart.length <= 0){
+        orderBtn.disabled = true;
+        return alert('Please add something to your cart!');
+    }
+    else {
+        clearCart();
+    }
 });
 

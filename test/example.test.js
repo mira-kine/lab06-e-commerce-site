@@ -1,7 +1,6 @@
 import { renderMochi } from '../render-mochi.js';
 import { mochis } from '../data/mochis.js';
 import { findById } from '../utils.js';
-import { renderItem } from '../render-item.js';
 import { getCart, addItem } from '../utils.js';
 
 const test = QUnit.test;

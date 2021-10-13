@@ -36,4 +36,7 @@ export function addItem(id){
     localStorage.setItem('CART', stringCart);
 }
 
-
+export function clearCart(){
+    localStorage.removeItem('CART');
+    window.location.replace('..');
+}
