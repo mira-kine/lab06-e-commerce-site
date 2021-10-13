@@ -1,6 +1,8 @@
 import { renderMochi } from '../render-mochi.js';
 import { mochis } from '../data/mochis.js';
 import { findById } from '../utils.js';
+import { renderItem } from '../render-item.js';
+import { cart } from '../data/cart-data.js';
 
 const test = QUnit.test;
 
@@ -20,4 +22,12 @@ test('findById function returns matching ID', (expect) => {
         price: 1.5 };
     const actual = findById('1', mochis);
     expect.deepEqual(actual, expected);
+});
+
+test('DOM render items in shopping cart, HTML snippet', (expect) => {
+    const expected = `<tr><td>calm mochi</td><td>1.5</td><td>3</td><td>4.5</td></tr>`;
+    const cartItem = cart[0];
+    const mochiData = mochis[0];
+    const actual = renderItem(cartItem, mochiData).outerHTML;
+    expect.equal(actual, expected);
 });

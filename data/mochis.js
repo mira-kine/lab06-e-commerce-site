@@ -5,7 +5,7 @@ export const mochis = [
         flavor: 'ube',
         mood: 'calm',
         img: './assets/calm-mochi.jpg',
-        price: 1.5
+        price: 2
     },
 
     {
@@ -14,7 +14,7 @@ export const mochis = [
         flavor: 'chocolate',
         mood: 'creative',
         img: './assets/creative-mochi.jpg',
-        price: 1.5
+        price: 2
     },
 
     {
@@ -23,7 +23,7 @@ export const mochis = [
         flavor: 'mango',
         mood: 'energetic',
         img: './assets/energy-mochi.jpg',
-        price: 1.5
+        price: 3
     },
 
     {
@@ -32,7 +32,7 @@ export const mochis = [
         flavor: 'strawberry',
         mood: 'nostalgic',
         img: './assets/nostalgic-mochi.jpg',
-        price: 1.5
+        price: 2
     },
 
     {
@@ -41,6 +41,6 @@ export const mochis = [
         flavor: 'matcha',
         mood: 'patient',
         img: './assets/patience-mochi.jpg',
-        price: 3.5
+        price: 3
     }
 ];
