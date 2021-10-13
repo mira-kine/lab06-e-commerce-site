@@ -31,3 +31,5 @@ test('DOM render items in shopping cart, HTML snippet', (expect) => {
     const actual = renderItem(cartItem, mochiData).outerHTML;
     expect.equal(actual, expected);
 });
+
+test('get')

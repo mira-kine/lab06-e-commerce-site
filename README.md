@@ -2,6 +2,16 @@
 
 ## Making a plan
 
+### 1. write tests
+        * test that getCart function will return the correct cart if it exists
+        * test that getCart will return empty array if it does not exist
+        * test that addItem will increase quantity of correct item.id by one
+        * test that addItem will make new item in shopping cart if it does not yet already exist
+    
+    2. make getCart function
+    3. make addItem function
+    4. create Event listener so that when button is clicked, addItem will getCart info and update
+    
 (bolded steps are mandatory, unbolded are for more advanced projects)
 
 1) **Make a drawing of your app. Simple "wireframes"**

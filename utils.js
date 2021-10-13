@@ -16,3 +16,8 @@ export function calcOrderTotal(cart, mochis){
     return totalPrice;
 
 }
+
+export function getCart(){
+    const cartString = localStorage.getItem('CART') || '[]';
+    
+}
