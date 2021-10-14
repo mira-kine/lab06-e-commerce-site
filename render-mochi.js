@@ -22,12 +22,12 @@ export function renderMochi(mochi){
     addProduct.id = mochi.id;
     addProduct.classList.add('add-product');
 
-    let itemCount = 0;
-    itemCount.qty = mochi.qty;
-    const addToCart = document.createElement('span');
-    addToCart.textContent = `Items in Cart: ${itemCount}`;
+    // let itemCount = 0;
+    // itemCount.qty = mochi.qty;
+    // const addToCart = document.createElement('span');
+    // addToCart.textContent = `Items in Cart: ${itemCount}`;
 
-    mochiItem.append(mochiHeader, img, addProduct, mochiFlavor, mochiMood, mochiPrice, itemCount);
+    mochiItem.append(mochiHeader, img, addProduct, mochiFlavor, mochiMood, mochiPrice);
     
     return mochiItem;
 }
