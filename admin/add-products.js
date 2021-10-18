@@ -20,6 +20,6 @@ form.addEventListener('submit', (e) => {
     // SET - call adProduct using that new object
     addProduct(newMochi);
     alert('new product added');
-    document.getElementById('product-form');
+    form.reset();
 });
 
