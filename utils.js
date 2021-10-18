@@ -1,3 +1,5 @@
+import { mochis } from './data/mochis.js';
+
 export function findById(id, items) {
     for (let item of items) {
         if (item.id === id) {
@@ -48,8 +50,22 @@ export function clearCart(){
 
 export function getProducts(){
     // get the PRODUCTS from local storage, set it to a mutable variable using let variable = localStorage.getItem('OBJECT');
+    let lsProducts = localStorage.getItem('PRODUCTS');
     // set const products to parsed info from lsproducts
+    const products = JSON.parse(lsProducts);
     // if there are NO products in local storage -- seed the data
+    if (!products){
+        const mochisString = JSON.stringify(mochis);
+        localStorage.setItem('PRODUCTS', mochisString);
+    }
     // return null || mochis --> Scenario 1 -- returns mochis
+    return products || mochis;
     // return products || mochis --> Scenarios 2 -- returns lsProducts
+}
+
+export function addProduct(newItem){
+    let products = getProducts();
+    products.push(newItem);
+    let productsString = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', productsString);
 }

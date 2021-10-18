@@ -1,9 +1,10 @@
 import { renderMochi } from './render-mochi.js';
-import { mochis } from './data/mochis.js';
-import { addItem } from './utils.js';
+// import { mochis } from './data/mochis.js';
+import { addItem, getProducts } from './utils.js';
 // import new function to get products fro ls
 
 const productList = document.getElementById('product-list');
+const mochis = getProducts();
 
 // set new const to getProducts 
 for (let mochi of mochis){

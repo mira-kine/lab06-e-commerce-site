@@ -24,7 +24,29 @@
         - create if/else statement
             - if there are no products in local storage, seed the data (aka seed sites are pages that search engines start on)
             - stringify data, setItem('PRODUCTS', your jsonstring const), and set equal local storage products to your item OR you can do return lsProducts || items; (which means that you would either return lsProducts, or if it does not exist, then items)
-        
+
+    2. Create Admin form page using HTML 
+        - use labels for each section
+        - correct input type
+        - match name with input purpose
+
+    3. TDD
+        - check if your addProduct function adds product to product array
+            - create new let = getProducts(); (make sure to import)
+            - set new const newProduct = { insert new product information aka new mochi with id that does not yet exist}
+            - addProduct(newProduct); to check for addProduct function
+            - set let variable to getProducts();
+            - expect.equal(actual, expected);
+    
+    4. Now write your addProduct(newItem) function:
+        <!-- a. GET -->
+            * let products = getProducts();
+        <!-- b. MODIFY -->
+            * push products to array
+        <!-- c. SET -->
+            * let string = stringify LS
+            * set item in LS
+            
     
 
 1) **Make a drawing of your app. Simple "wireframes"**
