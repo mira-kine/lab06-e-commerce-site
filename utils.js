@@ -1,4 +1,4 @@
-import { mochis } from './data/mochis';
+import { mochis } from './data/mochis.js';
 
 export function findById(id, items) {
     for (let item of items) {
@@ -61,4 +61,11 @@ export function getProducts(){
     // return null || mochis --> Scenario 1 -- returns mochis
     return products || mochis;
     // return products || mochis --> Scenarios 2 -- returns lsProducts
+}
+
+export function addProduct(newItem){
+    let products = getProducts();
+    products.push(newItem);
+    let productsString = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', productsString);
 }

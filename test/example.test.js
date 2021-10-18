@@ -1,7 +1,7 @@
 import { renderMochi } from '../render-mochi.js';
 import { mochis } from '../data/mochis.js';
 import { findById } from '../utils.js';
-import { getCart, addItem } from '../utils.js';
+import { getCart, addItem, getProducts, addProduct } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -78,4 +78,19 @@ test('orderBtn will clear local storage', (expect) => {
     const expected = [];
     const actual = getCart();
     expect.deepEqual(actual, expected);
+});
+
+test('check if addProduct function adds product to new product array', (expect) => {
+    let products = getProducts();
+    const newProduct = {
+        id: '6',
+        name: 'funny mochi',
+        flavor: 'red bean',
+        mood: 'funny',
+        img: './assets/funny-mochi.jpg',
+        price: 2
+    };
+    addProduct(newProduct);
+    products = getProducts();
+    expect.equal(products.length, 6);
 });
