@@ -24,7 +24,11 @@
         - create if/else statement
             - if there are no products in local storage, seed the data (aka seed sites are pages that search engines start on)
             - stringify data, setItem('PRODUCTS', your jsonstring const), and set equal local storage products to your item OR you can do return lsProducts || items; (which means that you would either return lsProducts, or if it does not exist, then items)
-        
+
+    2. Create Admin form page using HTML 
+        - use labels for each section
+        - correct input type
+        - match name with input purpose   
     
 
 1) **Make a drawing of your app. Simple "wireframes"**
