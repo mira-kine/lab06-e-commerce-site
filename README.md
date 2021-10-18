@@ -2,7 +2,7 @@
 
 ## Making a plan
 
-### 1. write tests
+### A. write tests
         * test that getCart function will return the correct cart if it exists
         * test that getCart will return empty array if it does not exist
         * test that addItem will increase quantity of correct item.id by one
@@ -13,6 +13,19 @@
     4. create Event listener so that when button is clicked, addItem will getCart info and update
     
 (bolded steps are mandatory, unbolded are for more advanced projects)
+
+### B. Use form to create objects - building an admin page
+    * make an admin page with a form that allows us to add products to our list of products
+    * Taking items from local storage
+    
+    1. create exportable function that will get the products from local storage using localStorage.getItem('PRODUCTS')
+        - import data
+        - create let local storage products
+        - create if/else statement
+            - if there are no products in local storage, seed the data (aka seed sites are pages that search engines start on)
+            - stringify data, setItem('PRODUCTS', your jsonstring const), and set equal local storage products to your item OR you can do return lsProducts || items; (which means that you would either return lsProducts, or if it does not exist, then items)
+        
+    
 
 1) **Make a drawing of your app. Simple "wireframes"**
 2) **Once you have a drawing, name the HTML elements you'll need to realize your vision**

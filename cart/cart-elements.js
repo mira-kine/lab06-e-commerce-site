@@ -1,6 +1,7 @@
 import { mochis } from '../data/mochis.js';
 import { findById, calcOrderTotal, getCart, clearCart } from '../utils.js';
 import { renderItem } from '../render-item.js';
+// import getProducts function to receive from localStorage
 
 // import cart data
 // loop through each item
