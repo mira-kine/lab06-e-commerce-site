@@ -21,7 +21,6 @@ for (let addButton of addButtons) {
     addButton.addEventListener('click', () => {
         addItem(addButton.id);
         alert('Thank you! Item Added');
-
     });
 }
 

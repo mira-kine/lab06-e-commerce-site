@@ -69,3 +69,21 @@ export function addProduct(newItem){
     let productsString = JSON.stringify(products);
     localStorage.setItem('PRODUCTS', productsString);
 }
+
+export function renderMochiAdmin(newMochi){
+    const newMochiItem = document.createElement('div');
+    newMochiItem.classList.add('mochi-item');
+
+    const mochiHeader = document.createElement('h3');
+    mochiHeader.textContent = newMochi.name;
+
+    const rmvProduct = document.createElement('button');
+    rmvProduct.textContent = 'Remove Product';
+    rmvProduct.id = newMochi.id;
+    rmvProduct.classList.add('remove-product');
+
+
+    newMochiItem.append(mochiHeader, rmvProduct);
+    
+    return newMochiItem;
+}

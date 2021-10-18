@@ -22,6 +22,7 @@ export function renderMochi(mochi){
     addProduct.id = mochi.id;
     addProduct.classList.add('add-product');
 
+
     // let itemCount = 0;
     // itemCount.qty = mochi.qty;
     // const addToCart = document.createElement('span');
