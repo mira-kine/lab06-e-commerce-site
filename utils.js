@@ -40,3 +40,16 @@ export function clearCart(){
     localStorage.removeItem('CART');
     window.location.replace('..');
 }
+
+
+// 2 scenarios for function
+// 1) function has never run before -- no data in localStorage
+// 2) function HAS run before -- mochis.js data is now in ls
+
+export function getProducts(){
+    // get the PRODUCTS from local storage, set it to a mutable variable using let variable = localStorage.getItem('OBJECT');
+    // set const products to parsed info from lsproducts
+    // if there are NO products in local storage -- seed the data
+    // return null || mochis --> Scenario 1 -- returns mochis
+    // return products || mochis --> Scenarios 2 -- returns lsProducts
+}

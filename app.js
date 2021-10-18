@@ -1,9 +1,11 @@
 import { renderMochi } from './render-mochi.js';
 import { mochis } from './data/mochis.js';
 import { addItem } from './utils.js';
+// import new function to get products fro ls
 
 const productList = document.getElementById('product-list');
 
+// set new const to getProducts 
 for (let mochi of mochis){
     const mochiItem = renderMochi(mochi);
     productList.append(mochiItem);
@@ -18,8 +20,6 @@ for (let addButton of addButtons) {
     addButton.addEventListener('click', () => {
         addItem(addButton.id);
         alert('Thank you! Item Added');
-        
-        
 
     });
 }
