@@ -1,4 +1,7 @@
 import { addProduct } from '../utils.js';
+import { renderMochiAdmin } from '../admin/admin-utils.js';
+// import { mochis } from './data/mochis.js';
+
 // GET - get our form
     // set it to a const, DOM ID the form
 const form = document.getElementById('product-form');
@@ -19,6 +22,7 @@ form.addEventListener('submit', (e) => {
     };
     // SET - call adProduct using that new object
     addProduct(newMochi);
+    renderMochiAdmin(newMochi);
     alert('new product added');
     form.reset();
 });

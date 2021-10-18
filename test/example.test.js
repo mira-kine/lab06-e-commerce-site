@@ -94,3 +94,7 @@ test('check if addProduct function adds product to new product array', (expect) 
     products = getProducts();
     expect.equal(products.length, 6);
 });
+
+// test('submit button will render mochi product list on admin page', (expect) => {
+//     const newMochi = renderMochiAdmin();
+// })
