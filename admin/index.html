@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/admin.css">
     <title>Admin Page</title>
 </head>
 <body>
-
+    <form id="product-form">
+        <label>
+            ID
+            <input type="text" name="id">
+        </label>
+        <label>
+            Name
+            <input type="text" name="name">
+        </label>
+        <label>
+            Flavor
+            <input type="text" name="flavor">
+        </label>
+        <label>
+            Mood
+            <input type="text" name="mood">
+        </label>
+        <label>
+            Image
+            <input type="text" name="img">
+        </label>
+        <label>
+            Price
+            <input type="text" name="price">
+        </label>
+        <button id="submit-button">Submit</button>
+    </form>
     <script type="module" src="./add-products.js"></script>
 </body>
 </html>

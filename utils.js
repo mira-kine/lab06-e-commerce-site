@@ -1,4 +1,4 @@
-import { mochis } from "./data/mochis";
+import { mochis } from './data/mochis';
 
 export function findById(id, items) {
     for (let item of items) {
