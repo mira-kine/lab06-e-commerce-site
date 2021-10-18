@@ -17,9 +17,9 @@ form.addEventListener('submit', (e) => {
         img: data.get('img'),
         price: data.get('price')
     };
+    // SET - call adProduct using that new object
     addProduct(newMochi);
     alert('new product added');
+    document.getElementById('product-form');
 });
-// SET - call adProduct using that new object
-    // 
 
